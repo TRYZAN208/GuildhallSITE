@@ -1,0 +1,104 @@
+
+
+
+<!-- 🌐 1. Put the language dropdown anywhere visible (header, corner, etc.) -->
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="cy">Welsh</option>
+    </select>
+
+    <!-- YOUR PAGE CONTENT HERE -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Style.css">
+<title>About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+    <script src="Scripts.js"></script>
+</body>
+</html>
+<body>
+
+    <header>
+        <div class="">
+            <h1> 
+    
+                <u>
+                    <div class="topnav">
+                         <a href="index.html" class="logo-link">
+    <img src="Assets/OfficialLogo.SVG" alt="Logo" width="100" height="50">
+  </a>
+  <a  href="index.html">Home</a>
+  <a href="History.html">History</a>
+  <a class="active" href="About.html">About</a> 
+  <a href="Contact.html">Contact</a>
+  <nav class="navbar">
+
+</div>
+<h6 style="font-weight: lighter; text-align: center; width: 100%; display: block;">The Guildhall Market was first established in 1860 and is now known as a cultural landmark in Cardigan. The market is perfect for both mature and young audiences and the market welcomes all people from different backgrounds to work, visit and to enjoy their stay at the Guildhall Market.</h6>
+
+<div class="button-container">
+<a href="History.html" class="button">Learn the History</a></div>
+
+
+</div> 
+
+
+
+
+
+</nav>
+
+</div>
+<div class="navbar">
+    <a href="Contact.html">Next Page </a>
+    <a href="Location.html">Location & Directions</a>
+    <a href="Media.html">Media</a>
+    <a href="Vendors.html">Vendors</a>
+    <a href="Joinus.html">Join Us!</a>
+     <a href="History.html">Previous </a>
+</div>  
+    <!-- 🟦 2. Put the hidden Google element at the bottom of the BODY -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+
+    <!-- 🟨 3. Put the script at the VERY END of the BODY -->
+    <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,cy',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+
+      document.getElementById("langSelect").addEventListener("change", function() {
+        changeLanguage(this.value);
+      });
+    }
+
+    function changeLanguage(lang) {
+      var googleSelect = document.querySelector(".goog-te-combo");
+
+      if (!googleSelect) {
+        console.error("Google Translate not loaded yet");
+        return;
+      }
+
+      googleSelect.value = lang;
+
+      googleSelect.dispatchEvent(new Event("change"));
+      setTimeout(() => {
+        googleSelect.dispatchEvent(new Event("change"));
+      }, 100);
+    }
+    </script>
+
+    <!-- Load Google Translate LAST -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

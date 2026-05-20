@@ -1,0 +1,173 @@
+
+
+
+
+</html>
+<!-- 🌐 1. Put the language dropdown anywhere visible (header, corner, etc.) -->
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="cy">Welsh</option>
+    </select>
+
+    <!-- YOUR PAGE CONTENT HERE -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Style.css">
+<title>Vendors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>  
+    
+    <script src="Scripts.js"></script>
+</body>
+</html>
+<body>
+
+            
+    
+                <u>
+                    <div class="topnav">
+                         <a href="index.html" class="logo-link">
+    <img src=Assets/OfficialLogo.SVG "Logo" width="100" height="50">
+
+
+
+  </a>
+  <a  href="index.html">Home</a>
+  <a href="History.html">History</a>
+  <a  href="About.html">About</a> 
+  <a href="Contact.html">Contact</a>
+  <nav class="navbar">
+<br>
+</div>
+
+</nav>
+
+</div>
+
+<main class="active">
+    
+       
+    <br>
+    <br>
+    <br>
+    <div>
+
+
+    </div>
+    
+ <h1 style="text-align: center; width: 100%; display: block;">Visit the Vendors at the market!</h1>
+<body class="vendors-page">
+    
+
+ <div class="vendor-container">
+ 
+<img src="Assets\ConsolCrazy.jpg" alt=""> 
+<h3>Consol Crazy sells:
+     Apple spares, batteries, car chargers, consoles, covers, data recovery, data transfer, earphones, glass LCD screens, HDMI cables, memory cards, mobile phone accessories, mobile phone chargers, mobile phone tempered glass, mobile phone unlocks, Nokia spares, repairs, retro games, Samsung spares, SD cards, universal chargers, unlocking, usb cables, video games.</h3>
+
+<br>
+<br>
+</div>
+
+<div class="vendor-container2">
+<img src="Assets/Totem.jpg" alt="">
+<h3>
+    Totem sells: Sterling silver jewellery, crystals, minerals, tumble stones, Preseli bluestone, dowsing pendulums, palm stones, display pieces, hanging crystals, fossils, fossilized sharks teeth, ammonites, room-mobiles, dream catchers, sun catchers, bells, incense (sticks and cones), essential oils, belly dance scarves, finger cymbals, American Indian smudge sticks and jewellery, Tibetan singing bowls and bells.
+</h3>
+
+
+
+</div>
+
+<div class="vendor-container3">
+<img src="Assets/mistermeze.jpg" alt="">
+<h3>
+    Mister Meze is a highly-rated vegetarian and vegan food stall located in the historic Cardigan Guildhall Market. Run by a husband-and-wife team, it is well-known locally for its fresh Mediterranean-inspired meze boxes and handcrafted mocktails.
+</h3>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+    
+
+</div>
+</div>
+
+</div>
+
+<div class="navbar">
+    <a href="Location.html">Location & Directions</a>
+    <a href="Media.html">Media</a>
+    <a class="active" href="Vendors.html">Vendors</a>
+    <a href="Joinus.html">Join Us!</a>
+    
+    <script src="Scripts.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    
+
+</body>
+
+<main>
+
+
+</div>
+
+
+
+
+</main>
+    <!-- 🟦 2. Put the hidden Google element at the bottom of the BODY -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+
+    <!-- 🟨 3. Put the script at the VERY END of the BODY -->
+    <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,cy',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+
+      document.getElementById("langSelect").addEventListener("change", function() {
+        changeLanguage(this.value);
+      });
+    }
+
+    function changeLanguage(lang) {
+      var googleSelect = document.querySelector(".goog-te-combo");
+
+      if (!googleSelect) {
+        console.error("Google Translate not loaded yet");
+        return;
+      }
+
+      googleSelect.value = lang;
+
+      googleSelect.dispatchEvent(new Event("change"));
+      setTimeout(() => {
+        googleSelect.dispatchEvent(new Event("change"));
+      }, 100);
+    }
+    </script>
+
+    <!-- Load Google Translate LAST -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

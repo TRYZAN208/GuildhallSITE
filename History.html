@@ -1,0 +1,148 @@
+ 
+
+
+
+<!-- 🌐 1. Put the language dropdown anywhere visible (header, corner, etc.) -->
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="cy">Welsh</option>
+    </select>
+
+    <!-- YOUR PAGE CONTENT HERE -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="Style.css">
+<title>History</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+</head>
+<body>
+
+    <script src="Scripts.js"></script>
+</body>
+</html>
+<body style="min-height: 110vb;">
+
+    <header>
+        <div class="">
+            <h1> 
+    
+                <u>
+                    <div class="topnav">
+                         <a href="index.html" class="logo-link">
+    <img src="Assets/OfficialLogo.SVG" alt="Logo" width="100" height="50">
+  </a>
+  <a href="index.html">Home</a>
+  <a class="active" href="History.html">History</a>
+  <a  href="About.html">About</a> 
+  <a href="Contact.html">Contact</a>
+
+</div>
+</nav>
+</div>
+<section class="timeline-section">
+  <div class="timeline-container">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">1840</div>
+      <div class="timeline-content">
+        <img src="Assets/cardigan_guildhall_1860s.jpg" alt="Historical Event 1">
+        <h3>The Beginning</h3>
+        <p>This is an image of the Guildhall back in 1840 though it wasn't exactly a market yet, it was still a hotspot for the people of Cardigan. </p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">1857</div>
+      <div class="timeline-content">
+        <img src="Assets/Cannon.JPG" alt="Historical Event 2">
+        <h3>Cannon Backstory</h3>
+        <p>The cannon is believed to have been captured from Russian forces during the Battle of Balaclava which is famous for the charge of the Light Brigade. The relic of the cannon was presented to the town in 1857 as a memorial for the poor soldiers who served and passed away during the Crimean War. This cannon is sometimes reffered to as the 'Balaclava Cannon' for this reason.</p>
+      </div>
+    </div>
+     <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">1860</div>
+      <div class="timeline-content">
+        <img src="Assets/1860class.svg" alt="Historical Event 2">
+        <h3>Grande Opening</h3>
+        <p>The first offcial openning of the Cardigan Guildhall Market, not just the Guildhall but the official Market.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">1892</div>
+      <div class="timeline-content">
+        <img src="Assets/cardigan_guildhall1940.jpg" alt="Historical Event 3">
+        <h3>Clock Tower Founded</h3>
+        <p>Clocktower finished it's construction as part of the Guildhall design which still stands here to this day.</p>
+      </div>
+      <br>
+      <br>
+      
+    </div>
+
+  </div>
+</section>
+</nav>
+</div>
+<br>
+<div class="timeline-text"
+ <h3 style="text-align: center; width: 100%; display: block;">Today, the Guildhall Market is established as a cultural landmark in Cardigan</h3>
+</div>
+</div>
+ <nav class="navbar">
+<div class="navbar">
+    <a href="About.html">Next Page </a>
+    <a href="Location.html">Location & Directions</a>
+    <a href="Media.html">Media</a>
+    <a href="Vendors.html">Vendors</a>
+    <a href="Joinus.html">Join Us!</a>
+    <a href="index.html">Previous </a>
+</div>   
+    <!-- 🟦 2. Put the hidden Google element at the bottom of the BODY -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+
+    <!-- 🟨 3. Put the script at the VERY END of the BODY -->
+    <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,cy',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+
+      document.getElementById("langSelect").addEventListener("change", function() {
+        changeLanguage(this.value);
+      });
+    }
+
+    function changeLanguage(lang) {
+      var googleSelect = document.querySelector(".goog-te-combo");
+
+      if (!googleSelect) {
+        console.error("Google Translate not loaded yet");
+        return;
+      }
+
+      googleSelect.value = lang;
+
+      googleSelect.dispatchEvent(new Event("change"));
+      setTimeout(() => {
+        googleSelect.dispatchEvent(new Event("change"));
+      }, 100);
+    }
+    </script>
+
+    <!-- Load Google Translate LAST -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

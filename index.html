@@ -1,0 +1,131 @@
+
+</html>
+
+
+
+
+<!-- 🌐 1. Put the language dropdown anywhere visible (header, corner, etc.) -->
+    <select id="langSelect">
+      <option value="en">English</option>
+      <option value="cy">Welsh</option>
+    </select>
+
+    <!-- YOUR PAGE CONTENT HERE -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Style.css">
+<title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>  
+    
+    <script src="Scripts.js"></script>
+</body>
+</html>
+<body>
+
+            
+    
+                <u>
+                    <div class="topnav">
+                         <a href="index.html" class="logo-link">
+    <img src=Assets/OfficialLogo.SVG "Logo" width="100" height="50">
+  </a>
+  <a class="active" href="index.html">Home</a>
+  <a href="History.html">History</a>
+  <a  href="About.html">About</a> 
+  <a href="Contact.html">Contact</a>
+  <nav class="navbar">
+<br>
+</div>
+
+</nav>
+
+</div>
+
+<main class="active">
+    
+       
+    <br>
+    <br>
+    <br>
+    <div>
+
+
+    </div>
+    
+ <h1 style="text-align: center; width: 100%; display: block;">Welcome to the Cardigan Guildhall Market Website!</h1>
+
+    
+</main
+<div class="carousel-container">
+  <div class="carousel-slide">
+    <img src="Assets/Courtyard entrance.JPG" alt="Market Courtyard">
+    <img src="Assets/MarketEntrance.JPG" alt="Market Entrance">
+    <img src="Assets/SideFrontMarket.jpg" alt="Side View of Market">
+  </div>
+  <button id="prevBtn">Next</button>
+  <button id="nextBtn">Prev</button>
+</div>
+</div>
+
+
+
+<div class="navbar">
+    <a href="History.html" class="right-link">Next Page </a>
+    <a href="Location.html">Location & Directions</a>
+    <a href="Media.html">Media</a>
+    <a href="Vendors.html">Vendors</a>
+    <a href="Joinus.html">Join Us!</a>
+    
+    <script src="Scripts.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    
+</body>
+    <!-- 🟦 2. Put the hidden Google element at the bottom of the BODY -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+
+    <!-- 🟨 3. Put the script at the VERY END of the BODY -->
+    <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,cy',
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+
+      document.getElementById("langSelect").addEventListener("change", function() {
+        changeLanguage(this.value);
+      });
+    }
+
+    function changeLanguage(lang) {
+      var googleSelect = document.querySelector(".goog-te-combo");
+
+      if (!googleSelect) {
+        console.error("Google Translate not loaded yet");
+        return;
+      }
+
+      googleSelect.value = lang;
+
+      googleSelect.dispatchEvent(new Event("change"));
+      setTimeout(() => {
+        googleSelect.dispatchEvent(new Event("change"));
+      }, 100);
+    }
+    </script>
+
+    <!-- Load Google Translate LAST -->
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+
+   
+                    
